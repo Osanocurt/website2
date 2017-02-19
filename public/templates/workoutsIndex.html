@@ -1,0 +1,9 @@
+<div class="box" ng-repeat="workout in workoutsIndex.all" a ui-sref ="workoutsShow({ id: workout._id })">
+  <div class="box-image">
+     <img class="img-responsive" src="{{ workout.posterImage }}" alt="" />
+  </div>
+  <div class="box-content">
+    <h2>Title</h2>
+    <p>{{ workout.text }}</p>
+  </div>
+</div>

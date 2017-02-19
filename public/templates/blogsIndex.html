@@ -1,0 +1,15 @@
+<article ng-repeat="blog in blogsIndex.all" a ui-sref ="blogsShow({ id: blog._id })">
+  <div class="article-header">
+    <div class="inner">
+      <h2>{{ blog.title }}</h2>
+      <img src="{{ blog.posterImage }}" />
+      </a>
+    </div>
+  </div>
+  <div class="article-body">
+    <h2 class="article-title">{{ blog.title }}</h2>
+    <a href="#">
+      <p>{{ blog.text }}</p>
+    </a>
+  </div>
+</article>

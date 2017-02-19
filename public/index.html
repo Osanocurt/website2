@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="tallyApp">
+  <head>
+    <meta charset="utf-8">
+    <title>Tally</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400italic,700italic,400,700,300' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular-resource.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/satellizer/0.15.5/satellizer.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+    <script src="/js/app.js" charset="utf-8"></script>
+    <script src="/js/controllers/blogs.js" charset="utf-8"></script>
+    <script src="/js/models/blog.js" charset="utf-8"></script>
+    <script src="/js/controllers/auth.js" charset="utf-8"></script>
+    <script src="/js/controllers/main.js" charset="utf-8"></script>
+    <script src="/js/controllers/workouts.js" charset="utf-8"></script>
+    <script src="/js/models/workout.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller= "MainController as main">
+  <nav role='navigation'>
+  <ul>
+    <li ng-if="main.isLoggedIn()"><a ui-sref="home" ui-sref-active="active">Home</a></li>
+    <li><a href="#">EAT</a>
+      <ul>
+        <li ng-if="main.isLoggedIn()"><a ui-sref="blogsIndex" ui-sref-active="active">Blogs</a></li>
+        <li><a href="">History</a></li>
+      </ul>
+    </li>
+    <li><a href="#">TRAIN</a>
+      <ul>
+        <li ng-if="main.isLoggedIn()"><a ui-sref="workoutsIndex" ui-sref-active="active">Workouts</a></li>
+        <li ng-if="main.isLoggedIn()"><a ui-sref="about" ui-sref-active="active">About</a></li>
+      </ul>
+    </li>
+    <li><a href="#">HAPPY</a>
+      <ul>
+        <li><a href="">Travels</a></li>
+        <li><a href="">Gym Gear</a></li>
+      </ul>
+    </li>
+    <li><a href="#">Admin</a>
+      <ul>
+        <li ng-if="main.isLoggedIn()"><a ui-sref="blogsNew" ui-sref-active="active">New Blog</a></li>
+        <li ng-if="main.isLoggedIn()"><a ui-sref="workoutsNew" ui-sref-active="active">New Workout</a></li>
+        <li ng-if="!main.isLoggedIn()"><a ui-sref="register" ui-sref-active="active">Register</a></li>
+        <li ng-if="!main.isLoggedIn()"><a ui-sref="login" ui-sref-active="active">Login</a></li>
+        <li ng-if="main.isLoggedIn()"><a ng-click="main.logout()">Logout</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+    <main class="container" ui-view></main>
+  </body>
+</html>
