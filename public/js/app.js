@@ -14,6 +14,11 @@ function Router($stateProvider, $urlRouterProvider) {
     url: '/home',
     templateUrl: '/templates/home.html'
   })
+  .state('recipesIndex', {
+    url: '/recipes',
+    templateUrl: '/templates/recipesIndex.html',
+    controller: 'RecipesIndexController as recipesIndex'
+  })
   .state('workoutsIndex', {
     url: '/workouts',
     templateUrl: '/templates/workoutsIndex.html',

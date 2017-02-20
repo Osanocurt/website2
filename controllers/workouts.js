@@ -3,14 +3,14 @@ const Workout = require('../models/workout');
 function workoutsIndex(req, res) {
   Workout.find((err, workouts) => {
     if(err) return res.status(500).json({ error: err });
-    return res.json(workout);
+    return res.json(workouts);
   });
 }
 
 function workoutsCreate(req, res) {
   Workout.create(req.body, (err, workout) => {
     if(err) return res.status(400).json({ error: err });
-    return res.json(workout);
+    return res.json(workouts);
   });
 }
 
@@ -18,7 +18,7 @@ function workoutsShow(req, res) {
   Workout.findById(req.params.id, (err, workout) => {
     if(err) return res.status(500).json({ error: err });
     if(!workout) return res.status(404).json({ error: 'Not found' });
-    return res.json(workout);
+    return res.json(workouts);
   });
 }
 
@@ -33,7 +33,7 @@ function workoutsUpdate(req, res) {
 
     workout.save((err, workout) => {
       if(err) return res.status(400).json({ error: err });
-      res.json(workout);
+      res.json(workouts);
     });
   });
 }
