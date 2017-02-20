@@ -3,7 +3,7 @@ const Blog = require('../models/blog');
 function blogsIndex(req, res) {
   Blog.find((err, blogs) => {
     if(err) return res.status(500).json({ error: err });
-    return res.json(blogs);
+    return res.json(blog);
   });
 }
 

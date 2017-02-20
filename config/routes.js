@@ -10,7 +10,6 @@ router
   .post('/login', authController.login)
   .post('/register', authController.register)
 
-
 router.route('/blogs')
   .get(blogsController.index)
   .post(secureRoute, blogsController.create);

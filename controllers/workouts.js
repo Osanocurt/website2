@@ -3,7 +3,7 @@ const Workout = require('../models/workout');
 function workoutsIndex(req, res) {
   Workout.find((err, workouts) => {
     if(err) return res.status(500).json({ error: err });
-    return res.json(workouts);
+    return res.json(workout);
   });
 }
 
