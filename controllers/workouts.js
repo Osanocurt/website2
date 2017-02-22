@@ -10,7 +10,7 @@ function workoutsIndex(req, res) {
 function workoutsCreate(req, res) {
   Workout.create(req.body, (err, workout) => {
     if(err) return res.status(400).json({ error: err });
-    return res.json(workouts);
+    return res.json(workout);
   });
 }
 
@@ -18,7 +18,7 @@ function workoutsShow(req, res) {
   Workout.findById(req.params.id, (err, workout) => {
     if(err) return res.status(500).json({ error: err });
     if(!workout) return res.status(404).json({ error: 'Not found' });
-    return res.json(workouts);
+    return res.json(workout);
   });
 }
 
@@ -33,7 +33,7 @@ function workoutsUpdate(req, res) {
 
     workout.save((err, workout) => {
       if(err) return res.status(400).json({ error: err });
-      res.json(workouts);
+      res.json(workout);
     });
   });
 }

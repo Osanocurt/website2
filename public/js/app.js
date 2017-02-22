@@ -19,6 +19,21 @@ function Router($stateProvider, $urlRouterProvider) {
     templateUrl: '/templates/recipesIndex.html',
     controller: 'RecipesIndexController as recipesIndex'
   })
+  .state('recipesNew', {
+    url: '/recipes/new',
+    templateUrl: '/templates/recipesNew.html',
+    controller: 'RecipesNewController as recipesNew'
+  })
+  .state('recipesShow', {
+    url: '/recipes/:id',
+    templateUrl: '/templates/recipesShow.html',
+    controller: 'RecipesShowController as recipesShow'
+  })
+  .state('recipesEdit', {
+    url: '/recipes:id/edit',
+    templateUrl: '/templates/recipesEdit.html',
+    controller: 'RecipesEditController as recipesEdit'
+  })
   .state('workoutsIndex', {
     url: '/workouts',
     templateUrl: '/templates/workoutsIndex.html',

@@ -1,9 +1,6 @@
-<div class="box" ng-repeat="workout in workoutsIndex.all" a ui-sref ="workoutsShow({ id: workout._id })">
-  <div class="box-image">
-     <img class="img-responsive" src="{{ workout.posterImage }}" alt="" />
-  </div>
-  <div class="box-content">
-    <h2>Title</h2>
-    <p>{{ workout.text }}</p>
-  </div>
-</div>
+<br><br><br><br><br>
+  <header style="float:left;" ng-repeat="workout in workoutsIndex.all" a ui-sref ="workoutsShow({ id: workout._id })">
+  <div><img src="{{ workout.posterImage }}" alt></div>
+  <h2>{{ workout.title }}</h2>
+  <h2>{{ workout.text }}</h2>
+  </header>

@@ -1,7 +1,7 @@
 <section>
-  <img ng-src="{{ recipeShow.blog.posterImage }}">
-  <h2>{{ recipeShow.recipe.title }}</h2>
-  <h4>{{ recipeShow.recipe.text }}</h4>
+  <img ng-src="{{ recipesShow.recipe.posterImage }}">
+  <h2>{{ recipesShow.recipe.title }}</h2>
+  <h4>{{ recipesShow.recipe.text }}</h4>
   <button ng-if="recipesShow.isLoggedIn()" ui-sref="recipesEdit({ id: recipesShow.blog._id })" class="button">Edit</button>
   <button ng-if="recipesShow.isLoggedIn()" ng-click="recipesShow.delete()">Delete</button>
 </section>

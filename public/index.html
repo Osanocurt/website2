@@ -19,6 +19,8 @@
     <script src="/js/controllers/main.js" charset="utf-8"></script>
     <script src="/js/controllers/workouts.js" charset="utf-8"></script>
     <script src="/js/models/workout.js" charset="utf-8"></script>
+    <script src="/js/models/recipe.js" charset="utf-8"></script>
+    <script src="/js/controllers/recipes.js" charset="utf-8"></script>
   </head>
   <body ng-controller= "MainController as main">
   <nav role='navigation'>
@@ -27,7 +29,7 @@
     <li><a href="#">EAT</a>
       <ul>
         <li ng-if="main.isLoggedIn()"><a ui-sref="blogsIndex" ui-sref-active="active">Blogs</a></li>
-        <li><a href="">History</a></li>
+        <li ng-if="main.isLoggedIn()"><a ui-sref="recipesIndex" ui-sref-active="active">Recipes</a></li>
       </ul>
     </li>
     <li><a href="#">TRAIN</a>
@@ -46,6 +48,7 @@
       <ul>
         <li ng-if="main.isLoggedIn()"><a ui-sref="blogsNew" ui-sref-active="active">New Blog</a></li>
         <li ng-if="main.isLoggedIn()"><a ui-sref="workoutsNew" ui-sref-active="active">New Workout</a></li>
+        <li ng-if="main.isLoggedIn()"><a ui-sref="recipesNew" ui-sref-active="active">New Recipe</a></li>
         <li ng-if="!main.isLoggedIn()"><a ui-sref="register" ui-sref-active="active">Register</a></li>
         <li ng-if="!main.isLoggedIn()"><a ui-sref="login" ui-sref-active="active">Login</a></li>
         <li ng-if="main.isLoggedIn()"><a ng-click="main.logout()">Logout</a></li>

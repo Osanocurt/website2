@@ -10,7 +10,7 @@ function blogsIndex(req, res) {
 function blogsCreate(req, res) {
   Blog.create(req.body, (err, blog) => {
     if(err) return res.status(400).json({ error: err });
-    return res.json(blogs);
+    return res.json(blog);
   });
 }
 
@@ -18,7 +18,7 @@ function blogsShow(req, res) {
   Blog.findById(req.params.id, (err, blog) => {
     if(err) return res.status(500).json({ error: err });
     if(!blog) return res.status(404).json({ error: 'Not found' });
-    return res.json(blogs);
+    return res.json(blog);
   });
 }
 
@@ -33,7 +33,7 @@ function blogsUpdate(req, res) {
 
     blog.save((err, blog) => {
       if(err) return res.status(400).json({ error: err });
-      res.json(blogs);
+      res.json(blog);
     });
   });
 }
