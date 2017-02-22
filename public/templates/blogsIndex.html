@@ -1,15 +1,9 @@
-<article style="margin:7%;"ng-repeat="blog in blogsIndex.all" a ui-sref ="blogsShow({ id: blog._id })">
-  <div class="article-header">
-    <div class="inner">
-      <h2>{{ blog.title }}</h2>
-      <img src="{{ blog.posterImage }}" />
-      </a>
-    </div>
-  </div>
-  <div class="article-body">
-    <h2 class="article-title">{{ blog.title }}</h2>
-    <a href="#">
-      <p>{{ blog.text }}</p>
-    </a>
-  </div>
-</article>
+<div class="container">
+ <figure ng-repeat="blog in blogsIndex.all" a ui-sref ="blogsShow({ id: blog._id })">
+   <img src="{{ blog.posterImage }}" alt="Thumb" width="250" height="250" />
+   <figcaption><div>
+     <h1>{{  blog.title }}</h1>
+     <p>{{ blog.text}}</p>
+   </div></figcaption>
+ </figure>
+</div>
