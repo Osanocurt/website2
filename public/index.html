@@ -24,7 +24,8 @@
   </head>
   <body ng-controller= "MainController as main">
 
-  <nav style="background-color:white;"class="navbar navbar-inverse" role='navigation'>
+  <nav style="background-color:white; "class="navbar navbar-inverse" role='navigation'>
+    <div class="container-fluid">
   <ul>
     <li ng-if="main.isLoggedIn()"><a ui-sref="home" ui-sref-active="active">Home</a></li>
     <li><a href="#">EAT</a>
@@ -59,5 +60,6 @@
 </nav>
   </div>
     <main class="container" ui-view></main>
+
   </body>
 </html>
