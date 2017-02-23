@@ -1,1 +1,13 @@
-<h1>Travels Edit</h1>
+<section class="row">
+  <form ng-submit="travelsEdit.update()">
+    <div class="form-group">
+      <label for="comment">Comment:</label>
+      <textarea ng-model="travelsEdit.travel.text" class="form-control" rows="5" id="comment"></textarea>
+    </div>
+    <div class="twelve columns">
+      <label>Image</label>
+      <input type="text" name="posterImage" placeholder="Poster Image" ng-model="travelsEdit.travel.posterImage" class="u-full-width">
+    </div>
+    <button >Update</button>
+  </form>
+</section>

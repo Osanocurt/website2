@@ -10,10 +10,6 @@ function Router($stateProvider, $urlRouterProvider) {
     url: '/about',
     templateUrl: '/templates/about.html',
   })
-  .state('travel', {
-    url: '/travel',
-    templateUrl: '/templates/travel.html',
-  })
   .state('home', {
     url: '/home',
     templateUrl: '/templates/home.html',
@@ -77,6 +73,26 @@ function Router($stateProvider, $urlRouterProvider) {
       url: '/blogs/:id/edit',
       templateUrl: '/templates/blogsEdit.html',
       controller: 'BlogsEditController as blogsEdit'
+    })
+    .state('travelsIndex', {
+      url: '/travels',
+      templateUrl: '/templates/travelsIndex.html',
+      controller: 'TravelsIndexController as travelsIndex'
+    })
+    .state('travelsNew', {
+      url: '/travels/new',
+      templateUrl: '/templates/travelsNew.html',
+      controller: 'TravelsNewController as travelsNew'
+    })
+    .state('travelsShow', {
+      url: '/travels/:id',
+      templateUrl: '/templates/travelsShow.html',
+      controller: 'TravelsShowController as travelsShow'
+    })
+    .state('travelsEdit', {
+      url: '/travels/:id/edit',
+      templateUrl: '/templates/travelsEdit.html',
+      controller: 'TravelsEditController as travelsEdit'
     })
     .state('register', {
       url: '/register',

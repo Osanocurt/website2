@@ -1,1 +1,26 @@
-<h1>TravelsIndex</h1>
+<header class="masthead clear">
+  <div class="centered">
+    <div class="site-branding">
+      <h2 class="site-title">TRAVELS</h2>
+    </div>
+  </header>
+  <main ng-repeat="travel in travelsIndex.all" a ui-sref ="travelsShow({ id: travel._id })" class="main-area">
+    <div  class="centered">
+      <section class="cards">
+        <article class="card">
+          <a href="#">
+            <figure class="thumbnail">
+            <img src="{{ travel.posterImage }}" alt="">
+            </figure>
+            <div class="card-content">
+              <h2>{{ travel.title }}</h2>
+              <p>{{ travel.text }}</p>
+            </div>
+            <!-- .card-content -->
+          </a>
+        </article>
+        <!-- .card -->
+       </div>
+          <!-- .centered -->
+        </div>
+        </main>
