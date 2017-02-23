@@ -1,19 +1,26 @@
 <header class="masthead clear">
   <div class="centered">
-
     <div class="site-branding">
       <h2 class="site-title">RECIPES</h2>
     </div>
-    <!-- .site-title -->
-  </div>
-  <!-- .centered -->
-</header>
-<div class="container">
- <figure ng-repeat="recipe in recipesIndex.all" a ui-sref ="recipesShow({ id: recipe._id })">
-   <img src="{{ recipe.posterImage }}" alt="Thumb" width="250" height="250" />
-   <figcaption><div>
-     <h2>{{ recipe.title }}</h2>
-     <h4>{{ recipe.text }}</h4>
-   </div></figcation>
- </figure>
-</div>
+  </header>
+  <main ng-repeat="recipe in recipesIndex.all" a ui-sref ="recipesShow({ id: recipe._id })">
+    <div  class="centered">
+      <section class="cards">
+        <article class="card">
+          <a href="#">
+            <figure class="thumbnail">
+            <img src="{{ recipe.posterImage }}" alt="">
+            </figure>
+            <div class="card-content">
+              <h2>{{ recipe.title }}</h2>
+              <p>{{ recipe.text }}</p>
+            </div>
+            <!-- .card-content -->
+          </a>
+        </article>
+        <!-- .card -->
+       </div>
+          <!-- .centered -->
+        </div>
+        </main>
