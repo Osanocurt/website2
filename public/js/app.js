@@ -8,11 +8,15 @@ function Router($stateProvider, $urlRouterProvider) {
   $stateProvider
   .state('about', {
     url: '/about',
-    templateUrl: '/templates/about.html'
+    templateUrl: '/templates/about.html',
+  })
+  .state('travel', {
+    url: '/travel',
+    templateUrl: '/templates/travel.html',
   })
   .state('home', {
     url: '/home',
-    templateUrl: '/templates/home.html'
+    templateUrl: '/templates/home.html',
   })
   .state('recipesIndex', {
     url: '/recipes',

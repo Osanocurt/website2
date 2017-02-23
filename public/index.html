@@ -42,7 +42,7 @@
     </li>
     <li><a href="#">HAPPY</a>
       <ul>
-        <li><a href="">Travels</a></li>
+        <li ng-if="main.isLoggedIn()"><a ui-sref="travel" ui-sref-active="active">Travel</a></li>
         <li><a href="">Gym Gear</a></li>
       </ul>
     </li>
