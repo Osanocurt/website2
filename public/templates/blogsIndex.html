@@ -1,4 +1,13 @@
-<h1>Blog</h1>
+<header class="masthead clear">
+  <div class="centered">
+
+    <div class="site-branding">
+      <h2 class="site-title">BLOGS</h2>
+    </div>
+    <!-- .site-title -->
+  </div>
+  <!-- .centered -->
+</header>
 <div class="container">
  <figure ng-repeat="blog in blogsIndex.all" a ui-sref ="blogsShow({ id: blog._id })">
    <img src="{{ blog.posterImage }}" alt="Thumb" width="250" height="250" />

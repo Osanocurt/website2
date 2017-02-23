@@ -1,4 +1,13 @@
-<h1>Recipe</h1>
+<header class="masthead clear">
+  <div class="centered">
+
+    <div class="site-branding">
+      <h2 class="site-title">RECIPES</h2>
+    </div>
+    <!-- .site-title -->
+  </div>
+  <!-- .centered -->
+</header>
 <div class="container">
  <figure ng-repeat="recipe in recipesIndex.all" a ui-sref ="recipesShow({ id: recipe._id })">
    <img src="{{ recipe.posterImage }}" alt="Thumb" width="250" height="250" />
