@@ -4,23 +4,12 @@
       <h2 class="site-title">WORKOUTS</h2>
     </div>
   </header>
-  <main ng-repeat="workout in workoutsIndex.all" a ui-sref ="workoutsShow({ id: workout._id })" class="main-area">
-    <div  class="centered">
-      <section class="cards">
-        <article class="card">
-          <a href="#">
-            <figure class="thumbnail">
-            <img src="{{ workout.posterImage }}" alt="meow">
-            </figure>
-            <div class="card-content">
-              <h2>{{ workout.title }}</h2>
-              <p>{{ workout.text }}</p>
-            </div>
-            <!-- .card-content -->
-          </a>
-        </article>
-        <!-- .card -->
-       </div>
-          <!-- .centered -->
-        </div>
-        </main>
+
+<figure ng-repeat="workout in workoutsIndex.all" a ui-sref ="workoutsShow({ id: workout._id })"   class="snip0016">
+  <img src="{{ workout.posterImage }}" alt="sample41"/>
+    <figcaption>
+      <h2>{{ workout.title }}</h2>
+        <p>{{ workout.text }}</p>
+        <a href="#"></a>
+    </figcaption>
+</figure>

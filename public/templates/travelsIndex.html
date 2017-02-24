@@ -4,23 +4,12 @@
       <h2 class="site-title">TRAVELS</h2>
     </div>
   </header>
-  <main ng-repeat="travel in travelsIndex.all" a ui-sref ="travelsShow({ id: travel._id })" class="main-area">
-    <div  class="centered">
-      <section class="cards">
-        <article class="card">
-          <a href="#">
-            <figure class="thumbnail">
-            <img src="{{ travel.posterImage }}" alt="">
-            </figure>
-            <div class="card-content">
-              <h2>{{ travel.title }}</h2>
-              <p>{{ travel.text }}</p>
-            </div>
-            <!-- .card-content -->
-          </a>
-        </article>
-        <!-- .card -->
-       </div>
-          <!-- .centered -->
-        </div>
-        </main>
+
+<figure ng-repeat="travel in travelsIndex.all" a ui-sref ="travelsShow({ id: travel._id })" class="snip0016">
+  <img src="{{ travel.posterImage }}" alt="sample41"/>
+    <figcaption>
+      <h2>{{ travel.title }}</h2>
+        <p>{{ travel.text }}</p>
+        <a href="#"></a>
+    </figcaption>
+</figure>

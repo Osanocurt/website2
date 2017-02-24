@@ -4,23 +4,11 @@
       <h2 class="site-title">BLOGS</h2>
     </div>
   </header>
-  <main ng-repeat="blog in blogsIndex.all" a ui-sref ="blogsShow({ id: blog._id })">
-    <div  class="centered">
-      <section class="cards">
-        <article class="card">
-          <a href="#">
-            <figure class="thumbnail">
-            <img src="{{ blog.posterImage }}" alt="">
-            </figure>
-            <div class="card-content">
-              <h2>{{ blog.title }}</h2>
-              <p>{{ blog.text }}</p>
-            </div>
-            <!-- .card-content -->
-          </a>
-        </article>
-        <!-- .card -->
-       </div>
-          <!-- .centered -->
-        </div>
-        </main>
+<figure ng-repeat="blog in blogsIndex.all" a ui-sref ="blogsShow({ id: blog._id })" class="snip0016">
+	<img src="{{ blog.posterImage }}" alt="sample41"/>
+	<figcaption>
+		<h2>{{ blog.title }}</h2>
+		<p>{{ blog.text }}</p>
+		<a href="#"></a>
+	</figcaption>
+</figure>
