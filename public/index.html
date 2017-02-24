@@ -11,6 +11,7 @@
     <script src="https://cdn.jsdelivr.net/satellizer/0.15.5/satellizer.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
     <script src="/js/app.js" charset="utf-8"></script>
     <script src="/js/controllers/blogs.js" charset="utf-8"></script>
@@ -30,6 +31,9 @@
     <div class="container-fluid">
   <ul>
     <li ng-if="main.isLoggedIn()"><a ui-sref="home" ui-sref-active="active">Home</a></li>
+    <li ng-if="main.isLoggedIn()"><a ui-sref="contact" ui-sref-active="active">Contact</a></li>
+    <li ng-if="main.isLoggedIn()"><a ui-sref="book" ui-sref-active="active">BOOK</a></li>
+
     <li><a href="#">EAT</a>
       <ul>
         <li ng-if="main.isLoggedIn()"><a ui-sref="blogsIndex" ui-sref-active="active">Blogs</a></li>
@@ -63,5 +67,35 @@
 </nav>
   </div>
     <main class="container" ui-view></main>
+    <section>
+<div class="container">
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3">
+        <hgroup>
+          <h3>
+            Subscribe for
+             <select class="frecuency">
+                 <option value="0">daily</option>
+                 <option value="1" selected>weekly</option>
+                 <option value="2">monthly</option>
+             </select>
+            newsletter
+          </h3>
+         </hgroup>
+    	 <div class="well">
+             <form action="#">
+              <div class="input-group">
+                 <input class="btn btn-lg" name="email" id="email" type="email" placeholder="Your Email" required>
+                 <button class="btn btn-info " type="submit">Submit</button>
+              </div>
+             </form>
+    	 </div>
+		</div>
+	</div>
+</div>
+</section>
+<footer>
+    <h1>FOOTER CONTENT</h1>
+</footer>
   </body>
 </html>

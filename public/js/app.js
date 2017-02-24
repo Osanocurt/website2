@@ -6,6 +6,14 @@ angular
 Router.$inject = ['$stateProvider', '$urlRouterProvider'];
 function Router($stateProvider, $urlRouterProvider) {
   $stateProvider
+  .state('book', {
+    url: '/book',
+    templateUrl: '/templates/book.html',
+  })
+  .state('contact', {
+    url: '/contact',
+    templateUrl: '/templates/contact.html',
+  })
   .state('about', {
     url: '/about',
     templateUrl: '/templates/about.html',
