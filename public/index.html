@@ -11,7 +11,7 @@
     <script src="https://cdn.jsdelivr.net/satellizer/0.15.5/satellizer.min.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
     <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
     <script src="/js/app.js" charset="utf-8"></script>
     <script src="/js/controllers/blogs.js" charset="utf-8"></script>
@@ -24,78 +24,110 @@
     <script src="/js/controllers/recipes.js" charset="utf-8"></script>
     <script src="/js/models/travel.js" charset="utf-8"></script>
     <script src="/js/controllers/travels.js" charset="utf-8"></script>
+    <meta name="viewport" content="width=device-width">
   </head>
   <body ng-controller= "MainController as main">
 
-  <nav style="background-color:white; "class="navbar navbar-inverse" role='navigation'>
-    <div class="container-fluid">
-  <ul>
-    <li ng-if="main.isLoggedIn()"><a ui-sref="home" ui-sref-active="active">Home</a></li>
-    <li ng-if="main.isLoggedIn()"><a ui-sref="contact" ui-sref-active="active">Contact</a></li>
-    <li ng-if="main.isLoggedIn()"><a ui-sref="book" ui-sref-active="active">BOOK</a></li>
+    <div class="wrap">
+    <span class="decor"></span>
+    <nav>
+      <ul class="primary">
+        <li>
+          <a href="">EAT</a>
+          <ul class="sub">
+            <li ng-if="main.isLoggedIn()"><a ui-sref="blogsIndex" ui-sref-active="active">Blogs</a></li>
+            <li ng-if="main.isLoggedIn()"><a ui-sref="recipesIndex" ui-sref-active="active">Recipes</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">TRAIN</a>
+          <ul class="sub">
+            <li ng-if="main.isLoggedIn()"><a ui-sref="workoutsIndex" ui-sref-active="active">Workouts</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">HAPPY</a>
+          <ul class="sub">
+            <li ng-if="main.isLoggedIn()"><a ui-sref="travelsIndex" ui-sref-active="active">Travels</a></li>
+            <li><a href="">Gym Gear</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="">ADMIN</a>
+          <ul class="sub">
+            <li ng-if="main.isLoggedIn()"><a ui-sref="blogsNew" ui-sref-active="active">New Blog</a></li>
+            <li ng-if="main.isLoggedIn()"><a ui-sref="workoutsNew" ui-sref-active="active">New Workout</a></li>
+            <li ng-if="main.isLoggedIn()"><a ui-sref="travelsNew" ui-sref-active="active">New Travel</a></li>
+            <li ng-if="main.isLoggedIn()"><a ui-sref="recipesNew" ui-sref-active="active">New Recipe</a></li>
+            <li ng-if="!main.isLoggedIn()"><a ui-sref="register" ui-sref-active="active">Register</a></li>
+            <li ng-if="!main.isLoggedIn()"><a ui-sref="login" ui-sref-active="active">Login</a></li>
+            <li ng-if="main.isLoggedIn()"><a ng-click="main.logout()">Logout</a></li>          </ul>
+        </li>
+        <li>
+          <a ui-sref="home" ui-sref-active="active">HOME</a>
+          <ul class="sub">
+            <li ng-if="main.isLoggedIn()"><a ui-sref="contact" ui-sref-active="active">Contact</a></li>
+            <li ng-if="main.isLoggedIn()"><a ui-sref="about" ui-sref-active="active">About</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    </div>
 
-    <li><a href="#">EAT</a>
-      <ul>
-        <li ng-if="main.isLoggedIn()"><a ui-sref="blogsIndex" ui-sref-active="active">Blogs</a></li>
-        <li ng-if="main.isLoggedIn()"><a ui-sref="recipesIndex" ui-sref-active="active">Recipes</a></li>
-      </ul>
-    </li>
-    <li><a href="#">TRAIN</a>
-      <ul>
-        <li ng-if="main.isLoggedIn()"><a ui-sref="workoutsIndex" ui-sref-active="active">Workouts</a></li>
-        <li ng-if="main.isLoggedIn()"><a ui-sref="about" ui-sref-active="active">About</a></li>
-      </ul>
-    </li>
-    <li><a href="#">HAPPY</a>
-      <ul>
-        <li ng-if="main.isLoggedIn()"><a ui-sref="travelsIndex" ui-sref-active="active">Travels</a></li>
-        <li><a href="">Gym Gear</a></li>
-      </ul>
-    </li>
-    <li><a href="#">Admin</a>
-      <ul>
-        <li ng-if="main.isLoggedIn()"><a ui-sref="blogsNew" ui-sref-active="active">New Blog</a></li>
-        <li ng-if="main.isLoggedIn()"><a ui-sref="workoutsNew" ui-sref-active="active">New Workout</a></li>
-        <li ng-if="main.isLoggedIn()"><a ui-sref="travelsNew" ui-sref-active="active">New Travel</a></li>
-        <li ng-if="main.isLoggedIn()"><a ui-sref="recipesNew" ui-sref-active="active">New Recipe</a></li>
-        <li ng-if="!main.isLoggedIn()"><a ui-sref="register" ui-sref-active="active">Register</a></li>
-        <li ng-if="!main.isLoggedIn()"><a ui-sref="login" ui-sref-active="active">Login</a></li>
-        <li ng-if="main.isLoggedIn()"><a ng-click="main.logout()">Logout</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav>
-  </div>
     <main class="container" ui-view></main>
-    <section>
-<div class="container">
-	<div class="row">
-		<div class="col-md-6 col-md-offset-3">
-        <hgroup>
-          <h3>
-            Subscribe for
-             <select class="frecuency">
-                 <option value="0">daily</option>
-                 <option value="1" selected>weekly</option>
-                 <option value="2">monthly</option>
-             </select>
-            newsletter
-          </h3>
-         </hgroup>
-    	 <div class="well">
-             <form action="#">
-              <div class="input-group">
-                 <input class="btn btn-lg" name="email" id="email" type="email" placeholder="Your Email" required>
-                 <button class="btn btn-info " type="submit">Submit</button>
+    <div class="container">
+  	<div class="row">
+          <div class="span12">
+      		<div class="thumbnail center well well-small text-center">
+
+                  <p>Subscribe and stay tuned!</p>
+
+                  <form action="" method="post">
+                      <div class="input-prepend"><span class="add-on"><i class="icon-envelope"></i></span>
+                          <input type="text" id="" name="" placeholder="Your@email.com">
+                      </div>
+                      <br />
+                      <input type="submit" value="Subscribe" class="btn btn-info" />
+                </form>
               </div>
-             </form>
-    	 </div>
-		</div>
-	</div>
-</div>
-</section>
+          </div>
+  	</div>
+  </div>
 <footer>
-    <h1>FOOTER CONTENT</h1>
+  <div class="container text-center">
+      <hr />
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="col-md-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a ui-sref="about" ui-sref-active="active">About</a></li>
+            <li><a ui-sref="blogsIndex" ui-sref-active="active">Blogs</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a ui-sref="contact" ui-sref-active="active">Contact</a></li>
+            <li><a ui-sref="recipesIndex" ui-sref-active="active">Recipes</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a ui-sref="workoutsIndex" ui-sref-active="active">Workouts</a></li>
+            <li><a ui-sref="travelsIndex" ui-sref-active="active">Travels</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3">
+          <ul class="nav nav-pills nav-stacked">
+            <li><a ui-sref="book" ui-sref-active="active">Book</a></li>
+            <li><a ui-sref="contact" ui-sref-active="active">Home</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <hr>
+    <p>© 2017 Tally Rye <br>Website by Curtis Osano</p>
+
+  </div>
 </footer>
   </body>
 </html>
