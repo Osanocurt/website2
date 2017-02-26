@@ -27,6 +27,9 @@
     <script src="/js/controllers/eatFavourites.js" charset="utf-8"></script>
     <script src="/js/models/trainFavourite.js" charset="utf-8"></script>
     <script src="/js/controllers/trainFavourites.js" charset="utf-8"></script>
+    <script src="/js/models/happyFavourite.js" charset="utf-8"></script>
+    <script src="/js/controllers/happyFavourites.js" charset="utf-8"></script>
+
     <meta name="viewport" content="width=device-width">
   </head>
   <body ng-controller= "MainController as main">
@@ -55,7 +58,7 @@
           <a href="">HAPPY</a>
           <ul class="sub">
             <li ng-if="main.isLoggedIn()"><a ui-sref="travelsIndex" ui-sref-active="active">Travels</a></li>
-            <li><a href="">Gym Gear</a></li>
+            <li ng-if="main.isLoggedIn()"><a ui-sref="happyFavouritesIndex" ui-sref-active="active"> Favourites</a></li>
           </ul>
         </li>
         <li>
@@ -64,6 +67,7 @@
             <li ng-if="main.isLoggedIn()"><a ui-sref="blogsNew" ui-sref-active="active">New Blog</a></li>
             <li ng-if="main.isLoggedIn()"><a ui-sref="eatFavouritesNew" ui-sref-active="active">New Eat Favourite</a></li>
             <li ng-if="main.isLoggedIn()"><a ui-sref="trainFavouritesNew" ui-sref-active="active">New Train Favourite</a></li>
+            <li ng-if="main.isLoggedIn()"><a ui-sref="happyFavouritesNew" ui-sref-active="active">New Happy Favourite</a></li>
             <li ng-if="main.isLoggedIn()"><a ui-sref="workoutsNew" ui-sref-active="active">New Workout</a></li>
             <li ng-if="main.isLoggedIn()"><a ui-sref="travelsNew" ui-sref-active="active">New Travel</a></li>
             <li ng-if="main.isLoggedIn()"><a ui-sref="recipesNew" ui-sref-active="active">New Recipe</a></li>
