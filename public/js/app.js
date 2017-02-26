@@ -22,25 +22,25 @@ function Router($stateProvider, $urlRouterProvider) {
     url: '/home',
     templateUrl: '/templates/home.html',
   })
-  .state('favouritesIndex', {
-    url: '/favourites',
-    templateUrl: '/templates/favouritesIndex.html',
-    controller: 'FavouritesIndexController as favouritesIndex'
+  .state('eatFavouritesIndex', {
+    url: '/eatFavourites',
+    templateUrl: '/templates/eatFavouritesIndex.html',
+    controller: 'EatFavouritesIndexController as eatFavouritesIndex'
   })
-  .state('favouritesNew', {
-    url: '/favourites/new',
-    templateUrl: '/templates/favouritesNew.html',
-    controller: 'FavouritesNewController as favouritesNew'
+  .state('eatFavouritesNew', {
+    url: '/eatFavourites/new',
+    templateUrl: '/templates/eatFavouritesNew.html',
+    controller: 'EatFavouritesNewController as eatFavouritesNew'
   })
-  .state('favouritesShow', {
-    url: '/favourites/:id',
-    templateUrl: '/templates/favouritesShow.html',
-    controller: 'FavouritesShowController as favouritesShow'
+  .state('eatFavouritesShow', {
+    url: '/eatFavourites/:id',
+    templateUrl: '/templates/eatFavouritesShow.html',
+    controller: 'EatFavouritesShowController as eatFavouritesShow'
   })
-  .state('favouritesEdit', {
-    url: '/favourites:id/edit',
-    templateUrl: '/templates/favouritesEdit.html',
-    controller: 'FavouritesEditController as favouritesEdit'
+  .state('eatFavouritesEdit', {
+    url: '/eatFavourites:id/edit',
+    templateUrl: '/templates/eatFavouritesEdit.html',
+    controller: 'EatFavouritesEditController as eatFavouritesEdit'
   })
   .state('recipesIndex', {
     url: '/recipes',

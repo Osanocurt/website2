@@ -1,0 +1,7 @@
+<section>
+  <img ng-src="{{ eatFavouritesShow.eatFavourite.posterImage }}">
+  <h2>{{ eatFavouritesShow.eatFavourite.title }}</h2>
+  <h4>{{ eatFavouritesShow.eatFavourite.text }}</h4>
+  <button ng-if="eatFavouritesShow.isLoggedIn()" ui-sref="eatFavouritesEdit({ id: eatFavouritesShow.eatFavourite._id })" class="button">Edit</button>
+  <button ng-if="eatFavouritesShow.isLoggedIn()" ng-click="eatFavouritesShow.delete()">Delete</button>
+</section>

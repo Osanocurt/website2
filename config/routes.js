@@ -3,7 +3,8 @@ const blogsController = require('../controllers/blogs');
 const workoutsController = require('../controllers/workouts');
 const recipesController = require('../controllers/recipes');
 const travelsController = require('../controllers/travels');
-const favouritesController = ('../controllers/favourites');
+const eatFavouritesController = require('../controllers/eatFavourites');
+const trainFavouritesController = require('../controllers/trainFavourites');
 const authController = require('../controllers/auth');
 const oauthController = require('../controllers/oauth');
 const secureRoute = require('../lib/secureRoute');
@@ -11,6 +12,24 @@ const secureRoute = require('../lib/secureRoute');
 router
   .post('/login', authController.login)
   .post('/register', authController.register)
+
+router.route('/eatFavourites')
+  .get(eatFavouritesController.index)
+  .post(secureRoute, eatFavouritesController.create);
+
+router.route('/eatFavourites/:id')
+  .get(eatFavouritesController.show)
+  .put(secureRoute, eatFavouritesController.update)
+  .delete(secureRoute, eatFavouritesController.delete);
+
+  router.route('/trainFavourites')
+    .get(trainFavouritesController.index)
+    .post(secureRoute, trainFavouritesController.create);
+
+  router.route('/trainFavourites/:id')
+    .get(trainFavouritesController.show)
+    .put(secureRoute, trainFavouritesController.update)
+    .delete(secureRoute, trainFavouritesController.delete);
 
 router.route('/blogs')
   .get(blogsController.index)
@@ -47,16 +66,5 @@ router.route('/blogs/:id')
     .get(travelsController.show)
     .put(secureRoute, travelsController.update)
     .delete(secureRoute, travelsController.delete);
-
-  // router.route('/favourites')
-  // .get(favouritesController.index)
-  // .post(secureRoute, favouritesController.create);
-
-  // router.route('/favourites/:id')
-  // .get(favouritesController.show)
-  // .put(secureRoute, favouritesController.update)
-  // .delete(secureRoute, favouritesController.delete);
-
-
 
 module.exports = router;
