@@ -1,0 +1,7 @@
+<section>
+  <img ng-src="{{ trainFavouritesShow.trainFavourite.posterImage }}">
+  <h2>{{ trainFavouritesShow.trainFavourite.title }}</h2>
+  <h4>{{ trainFavouritesShow.trainFavourite.text }}</h4>
+  <button ng-if="trainFavouritesShow.isLoggedIn()" ui-sref="trainFavouritesEdit({ id: trainFavouritesShow.trainFavourite._id })" class="button">Edit</button>
+  <button ng-if="trainFavouritesShow.isLoggedIn()" ng-click="trainFavouritesShow.delete()">Delete</button>
+</section>
