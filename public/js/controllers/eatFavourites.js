@@ -2,7 +2,7 @@ angular.module('tallyApp')
   .controller('EatFavouritesIndexController', EatFavouritesIndexController)
   .controller('EatFavouritesNewController', EatFavouritesNewController)
   .controller('EatFavouritesShowController', EatFavouritesShowController)
-  .controller('EatFavouritessEditController', EatFavouritesEditController);
+  .controller('EatFavouritesEditController', EatFavouritesEditController);
 
 
 EatFavouritesIndexController.$inject = ['EatFavourite'];
