@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const blogsController = require('../controllers/blogs');
+const eatFavouritesController = ('../controllers/eatFavourites')
 const workoutsController = require('../controllers/workouts');
 const recipesController = require('../controllers/recipes');
 const travelsController = require('../controllers/travels');
@@ -46,4 +47,13 @@ router.route('/blogs/:id')
         .get(travelsController.show)
         .put(secureRoute, travelsController.update)
         .delete(secureRoute, travelsController.delete);
+
+        router.route('/eatFavourites')
+          .get(eatFavouritesController.index)
+          .post(secureRoute, eatFavouritesController.create);
+
+        router.route('/eatFavourites/:id')
+          .get(eatFavouritesController.show)
+          .put(secureRoute, eatFavouritesController.update)
+          .delete(secureRoute, eatFavouritesController.delete);
 module.exports = router;

@@ -22,6 +22,11 @@ function Router($stateProvider, $urlRouterProvider) {
     url: '/home',
     templateUrl: '/templates/home.html',
   })
+  .state('eatFavouritesIndex', {
+    url: '/eatFavourites',
+    templateUrl: '/templates/eatFavouritesIndex.html',
+    controller: 'EatFavouritesIndexController as eatFavouritesIndex'
+  })
   .state('recipesIndex', {
     url: '/recipes',
     templateUrl: '/templates/recipesIndex.html',
