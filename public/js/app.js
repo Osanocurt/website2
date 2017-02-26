@@ -65,15 +65,15 @@ function Router($stateProvider, $urlRouterProvider) {
   .state('personalTrainingsIndex', {
     url: '/personalTrainings',
     templateUrl: '/templates/personalTrainingsIndex.html',
-    controller: 'personalTrainingsIndexController as personalTrainingsIndex'
+    controller: 'PersonalTrainingsIndexController as personalTrainingsIndex'
   })
   .state('personalTrainingsNew', {
     url: '/personalTrainings/new',
     templateUrl: '/templates/personalTrainingsNew.html',
-    controller: 'personalTrainingsNewController as personalTrainingsNew'
+    controller: 'PersonalTrainingsNewController as personalTrainingsNew'
   })
   .state('personalTrainingsShow', {
-    url: '/personlTrainings/:id',
+    url: '/personalTrainings/:id',
     templateUrl: '/templates/personalTrainingsShow.html',
     controller: 'PersonalTrainingsShowController as personalTrainingsShow'
   })
