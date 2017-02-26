@@ -62,6 +62,26 @@ function Router($stateProvider, $urlRouterProvider) {
     templateUrl: '/templates/trainFavouritesEdit.html',
     controller: 'TrainFavouritesEditController as trainFavouritesEdit'
   })
+  .state('personalTrainingsIndex', {
+    url: '/personalTrainings',
+    templateUrl: '/templates/personalTrainingsIndex.html',
+    controller: 'personalTrainingsIndexController as personalTrainingsIndex'
+  })
+  .state('personalTrainingsNew', {
+    url: '/personalTrainings/new',
+    templateUrl: '/templates/personalTrainingsNew.html',
+    controller: 'personalTrainingsNewController as personalTrainingsNew'
+  })
+  .state('personalTrainingsShow', {
+    url: '/personlTrainings/:id',
+    templateUrl: '/templates/personalTrainingsShow.html',
+    controller: 'PersonalTrainingsShowController as personalTrainingsShow'
+  })
+  .state('personalTrainingsEdit', {
+    url: '/personalTrainings:id/edit',
+    templateUrl: '/templates/personalTrainigsEdit.html',
+    controller: 'PersonalTrainingsEditController as personalTrainingsEdit'
+  })
   .state('happyFavouritesIndex', {
     url: '/happyFavourites',
     templateUrl: '/templates/happyFavouritesIndex.html',
