@@ -1,0 +1,15 @@
+<header class="masthead clear">
+  <div class="centered">
+    <div class="site-branding">
+      <h1 class="site-title">Happy Favourites</h1>
+    </div>
+  </div>
+</header>
+
+<figure ng-repeat="happyFavourites in happyFavouritesIndex.all" a ui-sref ="happyFavouritesShow({ id: happyFavourites._id })" class="snip0016">
+<img src="{{ happyFavourites.posterImage }}" alt="sample41"/>
+<figcaption>
+<h2>{{ happyFavourites.title }}</h2>
+  <a href="#"></a>
+</figcaption>
+</figure>

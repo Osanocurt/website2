@@ -1,0 +1,7 @@
+<section>
+  <img ng-src="{{ happyFavouritesShow.happyFavourite.posterImage }}">
+  <h2>{{ happyFavouritesShow.happyFavourite.title }}</h2>
+  <h4>{{ happyFavouritesShow.happyFavourite.text }}</h4>
+  <button ng-if="happyFavouritesShow.isLoggedIn()" ui-sref="happyFavouritesEdit({ id: happyFavouritesShow.happyFavourite._id })" class="button">Edit</button>
+  <button ng-if="happyFavouritesShow.isLoggedIn()" ng-click="happyFavouritesShow.delete()">Delete</button>
+</section>

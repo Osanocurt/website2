@@ -6,6 +6,7 @@ const travelsController = require('../controllers/travels');
 const eatFavouritesController = require('../controllers/eatFavourites');
 const trainFavouritesController = require('../controllers/trainFavourites');
 const happyFavouritesController = require('../controllers/happyFavourites');
+const personalTrainingsController = require('../controllers/personalTrainings');
 const authController = require('../controllers/auth');
 const oauthController = require('../controllers/oauth');
 const secureRoute = require('../lib/secureRoute');
@@ -32,14 +33,14 @@ router.route('/trainFavourites/:id')
   .put(secureRoute, trainFavouritesController.update)
   .delete(secureRoute, trainFavouritesController.delete);
 
-  router.route('/happyFavourites')
-    .get(happyFavouritesController.index)
-    .post(secureRoute, happyFavouritesController.create);
+router.route('/happyFavourites')
+  .get(happyFavouritesController.index)
+  .post(secureRoute, happyFavouritesController.create);
 
-  router.route('/happyFavourites/:id')
-    .get(happyFavouritesController.show)
-    .put(secureRoute, happyFavouritesController.update)
-    .delete(secureRoute, happyFavouritesController.delete);
+router.route('/happyFavourites/:id')
+  .get(happyFavouritesController.show)
+  .put(secureRoute, happyFavouritesController.update)
+  .delete(secureRoute, happyFavouritesController.delete);
 
 router.route('/blogs')
   .get(blogsController.index)
@@ -50,31 +51,40 @@ router.route('/blogs/:id')
   .put(secureRoute, blogsController.update)
   .delete(secureRoute, blogsController.delete);
 
-  router.route('/workouts')
-    .get(workoutsController.index)
-    .post(secureRoute, workoutsController.create);
+router.route('/workouts')
+  .get(workoutsController.index)
+  .post(secureRoute, workoutsController.create);
 
-  router.route('/workouts/:id')
-    .get(workoutsController.show)
-    .put(secureRoute, workoutsController.update)
-    .delete(secureRoute, workoutsController.delete);
+router.route('/workouts/:id')
+  .get(workoutsController.show)
+  .put(secureRoute, workoutsController.update)
+  .delete(secureRoute, workoutsController.delete);
 
-  router.route('/recipes')
-    .get(recipesController.index)
-    .post(secureRoute, recipesController.create);
+router.route('/recipes')
+  .get(recipesController.index)
+  .post(secureRoute, recipesController.create);
 
-  router.route('/recipes/:id')
-    .get(recipesController.show)
-    .put(secureRoute, recipesController.update)
-    .delete(secureRoute, recipesController.delete);
+router.route('/recipes/:id')
+  .get(recipesController.show)
+  .put(secureRoute, recipesController.update)
+  .delete(secureRoute, recipesController.delete);
 
-  router.route('/travels')
-    .get(travelsController.index)
-    .post(secureRoute, travelsController.create);
+router.route('/personalTrainings')
+  .get(personalTrainingsController.index)
+  .post(secureRoute, personalTrainingsController.create);
 
-  router.route('/travels/:id')
-    .get(travelsController.show)
-    .put(secureRoute, travelsController.update)
-    .delete(secureRoute, travelsController.delete);
+router.route('/personalTrainings/:id')
+  .get(personalTrainingsController.show)
+  .put(secureRoute, personalTrainingsController.update)
+  .delete(secureRoute, personalTrainingsController.delete);
+
+router.route('/travels')
+  .get(travelsController.index)
+  .post(secureRoute, travelsController.create);
+
+router.route('/travels/:id')
+  .get(travelsController.show)
+  .put(secureRoute, travelsController.update)
+  .delete(secureRoute, travelsController.delete);
 
 module.exports = router;
