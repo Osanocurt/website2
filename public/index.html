@@ -42,13 +42,13 @@
             <li ng-if="main.isLoggedIn()"><a ui-sref="book" ui-sref-active="active">Book</a></li>
             <li ng-if="main.isLoggedIn()"><a ui-sref="recipesIndex" ui-sref-active="active">Recipes</a></li>
             <li ng-if="main.isLoggedIn()"><a ui-sref="eatFavouritesIndex" ui-sref-active="active"> Favourites</a></li>
-
           </ul>
         </li>
         <li>
           <a href="">TRAIN</a>
           <ul class="sub">
             <li ng-if="main.isLoggedIn()"><a ui-sref="workoutsIndex" ui-sref-active="active">Workouts</a></li>
+            <li ng-if="main.isLoggedIn()"><a ui-sref="trainFavouritesIndex" ui-sref-active="active"> Favourites</a></li>
           </ul>
         </li>
         <li>
@@ -63,6 +63,7 @@
           <ul class="sub">
             <li ng-if="main.isLoggedIn()"><a ui-sref="blogsNew" ui-sref-active="active">New Blog</a></li>
             <li ng-if="main.isLoggedIn()"><a ui-sref="eatFavouritesNew" ui-sref-active="active">New Eat Favourite</a></li>
+            <li ng-if="main.isLoggedIn()"><a ui-sref="trainFavouritesNew" ui-sref-active="active">New Train Favourite</a></li>
             <li ng-if="main.isLoggedIn()"><a ui-sref="workoutsNew" ui-sref-active="active">New Workout</a></li>
             <li ng-if="main.isLoggedIn()"><a ui-sref="travelsNew" ui-sref-active="active">New Travel</a></li>
             <li ng-if="main.isLoggedIn()"><a ui-sref="recipesNew" ui-sref-active="active">New Recipe</a></li>
