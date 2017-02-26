@@ -23,8 +23,8 @@
     <script src="/js/controllers/recipes.js" charset="utf-8"></script>
     <script src="/js/models/travel.js" charset="utf-8"></script>
     <script src="/js/controllers/travels.js" charset="utf-8"></script>
-    <script src="/js/models/eatFavourite.js" charset="utf-8"></script>
-    <script src="/js/controllers/eatFavourites.js" charset="utf-8"></script>
+    <script src="/js/models/favourite.js" charset="utf-8"></script>
+    <script src="/js/controllers/favourites.js" charset="utf-8"></script>
     <meta name="viewport" content="width=device-width">
   </head>
   <body ng-controller= "MainController as main">
@@ -38,7 +38,7 @@
           <ul class="sub">
             <li ng-if="main.isLoggedIn()"><a ui-sref="blogsIndex" ui-sref-active="active">Blogs</a></li>
             <li ng-if="main.isLoggedIn()"><a ui-sref="recipesIndex" ui-sref-active="active">Recipes</a></li>
-            <li ng-if="main.isLoggedIn()"><a ui-sref="eatFavouritesIndex" ui-sref-active="active">Eat Favourites</a></li>
+            <li ng-if="main.isLoggedIn()"><a ui-sref="favouritesIndex" ui-sref-active="active"> Favourites</a></li>
 
           </ul>
         </li>
