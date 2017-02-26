@@ -5,6 +5,7 @@ const recipesController = require('../controllers/recipes');
 const travelsController = require('../controllers/travels');
 const eatFavouritesController = require('../controllers/eatFavourites');
 const trainFavouritesController = require('../controllers/trainFavourites');
+const happyFavouritesController = require('../controllers/happyFavourites');
 const authController = require('../controllers/auth');
 const oauthController = require('../controllers/oauth');
 const secureRoute = require('../lib/secureRoute');
@@ -22,14 +23,23 @@ router.route('/eatFavourites/:id')
   .put(secureRoute, eatFavouritesController.update)
   .delete(secureRoute, eatFavouritesController.delete);
 
-  router.route('/trainFavourites')
-    .get(trainFavouritesController.index)
-    .post(secureRoute, trainFavouritesController.create);
+router.route('/trainFavourites')
+  .get(trainFavouritesController.index)
+  .post(secureRoute, trainFavouritesController.create);
 
-  router.route('/trainFavourites/:id')
-    .get(trainFavouritesController.show)
-    .put(secureRoute, trainFavouritesController.update)
-    .delete(secureRoute, trainFavouritesController.delete);
+router.route('/trainFavourites/:id')
+  .get(trainFavouritesController.show)
+  .put(secureRoute, trainFavouritesController.update)
+  .delete(secureRoute, trainFavouritesController.delete);
+
+  router.route('/happyFavourites')
+    .get(happyFavouritesController.index)
+    .post(secureRoute, happyFavouritesController.create);
+
+  router.route('/happyFavourites/:id')
+    .get(happyFavouritesController.show)
+    .put(secureRoute, happyFavouritesController.update)
+    .delete(secureRoute, happyFavouritesController.delete);
 
 router.route('/blogs')
   .get(blogsController.index)
