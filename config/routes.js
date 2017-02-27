@@ -6,7 +6,7 @@ const travelsController = require('../controllers/travels');
 const eatFavouritesController = require('../controllers/eatFavourites');
 const trainFavouritesController = require('../controllers/trainFavourites');
 const happyFavouritesController = require('../controllers/happyFavourites');
-const personalTrainingsController = require('../controllers/personalTrainings');
+const trainingsController = require('../controllers/trainings');
 const authController = require('../controllers/auth');
 const oauthController = require('../controllers/oauth');
 const secureRoute = require('../lib/secureRoute');
@@ -69,14 +69,14 @@ router.route('/recipes/:id')
   .put(secureRoute, recipesController.update)
   .delete(secureRoute, recipesController.delete);
 
-router.route('/personalTrainings')
-  .get(personalTrainingsController.index)
-  .post(secureRoute, personalTrainingsController.create);
+router.route('/trainings')
+  .get(trainingsController.index)
+  .post(secureRoute, trainingsController.create);
 
-router.route('/personalTrainings/:id')
-  .get(personalTrainingsController.show)
-  .put(secureRoute, personalTrainingsController.update)
-  .delete(secureRoute, personalTrainingsController.delete);
+router.route('/trainings/:id')
+  .get(trainingsController.show)
+  .put(secureRoute, trainingsController.update)
+  .delete(secureRoute, trainingsController.delete);
 
 router.route('/travels')
   .get(travelsController.index)

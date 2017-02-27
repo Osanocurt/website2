@@ -1,0 +1,15 @@
+<header class="masthead clear">
+  <div class="centered">
+    <div class="site-branding">
+      <h1 class="site-title">Personal Training</h1>
+    </div>
+  </div>
+</header>
+
+<figure ng-repeat="trainings in trainingsIndex.all" a ui-sref ="trainingsShow({ id: training._id })" class="snip0016">
+<img src="{{ trainings.posterImage }}" alt="sample41"/>
+<figcaption>
+<h2>{{ trainings.title }}</h2>
+  <a href="#"></a>
+</figcaption>
+</figure>

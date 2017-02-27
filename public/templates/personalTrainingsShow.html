@@ -1,7 +1,0 @@
-<section>
-  <img ng-src="{{ personalTrainingsShow.personalTraining.posterImage }}">
-  <h2>{{ personalTrainingsShow.personalTraining.title }}</h2>
-  <h4>{{ personalTrainingsShow.personalTraining.text }}</h4>
-  <button ng-if="personalTrainingsShow.isLoggedIn()" ui-sref="personalTrainingsEdit({ id: personalTrainingsShow.personalTraining._id })" class="button">Edit</button>
-  <button ng-if="personalTrainingsShow.isLoggedIn()" ng-click="personalTrainingsShow.delete()">Delete</button>
-</section>

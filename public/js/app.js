@@ -62,25 +62,25 @@ function Router($stateProvider, $urlRouterProvider) {
     templateUrl: '/templates/trainFavouritesEdit.html',
     controller: 'TrainFavouritesEditController as trainFavouritesEdit'
   })
-  .state('personalTrainingsIndex', {
-    url: '/personalTrainings',
-    templateUrl: '/templates/personalTrainingsIndex.html',
-    controller: 'PersonalTrainingsIndexController as personalTrainingsIndex'
+  .state('trainingsIndex', {
+    url: '/trainings',
+    templateUrl: '/templates/trainingsIndex.html',
+    controller: 'TrainingsIndexController as trainingsIndex'
   })
-  .state('personalTrainingsNew', {
-    url: '/personalTrainings/new',
-    templateUrl: '/templates/personalTrainingsNew.html',
-    controller: 'PersonalTrainingsNewController as personalTrainingsNew'
+  .state('trainingsNew', {
+    url: '/trainings/new',
+    templateUrl: '/templates/trainingsNew.html',
+    controller: 'TrainingsNewController as trainingsNew'
   })
-  .state('personalTrainingsShow', {
-    url: '/personalTrainings/:id',
-    templateUrl: '/templates/personalTrainingsShow.html',
-    controller: 'PersonalTrainingsShowController as personalTrainingsShow'
+  .state('trainingsShow', {
+    url: '/trainings/:id',
+    templateUrl: '/templates/trainingsShow.html',
+    controller: 'TrainingsShowController as trainingsShow'
   })
-  .state('personalTrainingsEdit', {
-    url: '/personalTrainings:id/edit',
-    templateUrl: '/templates/personalTrainigsEdit.html',
-    controller: 'PersonalTrainingsEditController as personalTrainingsEdit'
+  .state('trainingsEdit', {
+    url: '/trainings:id/edit',
+    templateUrl: '/templates/trainigsEdit.html',
+    controller: 'TrainingsEditController as trainingsEdit'
   })
   .state('happyFavouritesIndex', {
     url: '/happyFavourites',
