@@ -6,7 +6,6 @@ const travelsController = require('../controllers/travels');
 const eatFavouritesController = require('../controllers/eatFavourites');
 const trainFavouritesController = require('../controllers/trainFavourites');
 const happyFavouritesController = require('../controllers/happyFavourites');
-const trainingsController = require('../controllers/trainings');
 const authController = require('../controllers/auth');
 const oauthController = require('../controllers/oauth');
 const secureRoute = require('../lib/secureRoute');
@@ -68,15 +67,6 @@ router.route('/recipes/:id')
   .get(recipesController.show)
   .put(secureRoute, recipesController.update)
   .delete(secureRoute, recipesController.delete);
-
-router.route('/trainings')
-  .get(trainingsController.index)
-  .post(secureRoute, trainingsController.create);
-
-router.route('/trainings/:id')
-  .get(trainingsController.show)
-  .put(secureRoute, trainingsController.update)
-  .delete(secureRoute, trainingsController.delete);
 
 router.route('/travels')
   .get(travelsController.index)
